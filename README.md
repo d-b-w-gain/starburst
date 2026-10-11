@@ -10,6 +10,10 @@ The existing frame and the seasoned timber blank before facing:
 
 <img src="starburst_frame.jpg" alt="Metal starburst frame surrounding a circular timber blank with radial cracks" width="440">
 
+The timber during facing:
+
+<img src="facing/machining_video_still.jpg" alt="WM3020 facing the circular timber blank" width="280">
+
 ## Current model: 200 mm Y travel version
 
 ![190 mm pleated relief on a 225 mm circular base](wm3020-Y200/starburst_preview.png)
@@ -71,9 +75,9 @@ The older [circular spiral file](facing/face_230mm_spiral_16mm_one_pass.gcode) r
 
 Workshop footage of the timber being faced on the WM3020:
 
-[![Facing the timber on the WM3020 — watch the video](facing/machining_video_still.jpg)](<facing_23mm slab.mp4>)
+https://github.com/user-attachments/assets/77e648ae-6880-4e7f-9cc8-261acf7360e4
 
-[Watch or download the original 29-second MP4](<facing_23mm slab.mp4>).
+[Download the original 29-second MP4](https://github.com/d-b-w-gain/starburst/raw/refs/heads/master/facing_23mm%20slab.mp4).
 
 ## Planned workholding for the relief
 
