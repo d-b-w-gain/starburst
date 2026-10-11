@@ -1,0 +1,64 @@
+(STAR BURST TIMBER - ONE SPIRAL FACING PASS)
+(REQUIRES 216 MM Y TRAVEL - DOES NOT FIT 200 MM Y RANGE)
+(Units mm - stock 220 to 230 diameter - cutter 16 diameter)
+(G54 X0 Y0 at timber centre - Z0 at highest top surface)
+(One cutting plane Z-0.500 - XY feed 600 mm/min)
+(6 mm pitch - tangent semicircles - clockwise inward sweep)
+(Start above centre - check Z5 clears timber and fixtures)
+(Check travel X-108 to X140 and Y-108 to Y108)
+(Cutter envelope X-116 to X148 and Y-116 to Y116)
+(Entry from positive X - cutter starts fully outside timber)
+(MANUALLY START SPINDLE BEFORE RUNNING)
+(No automatic spindle or speed control)
+(For another cut reset Z0 to newly faced top before rerunning)
+(After flipping re-clamp and reset centre XY and top Z)
+G21 G17 G90 G91.1 G94
+G54 G40 G49
+G0 Z5.000
+G0 X140.000 Y0.000
+G1 Z-0.500 F120
+(Tangent entry semicircle - no plunge into wood)
+G3 X108.000 Y0.000 I-16.000 J0.000 F600
+(Complete outer cleanup circle)
+G2 X-108.000 Y0.000 I-108.000 J0.000
+G2 X108.000 Y0.000 I108.000 J0.000
+(Continuous inward spiral - one fixed depth)
+G2 X-105.000 Y0.000 I-106.500 J0.000
+G2 X102.000 Y0.000 I103.500 J0.000
+G2 X-99.000 Y0.000 I-100.500 J0.000
+G2 X96.000 Y0.000 I97.500 J0.000
+G2 X-93.000 Y0.000 I-94.500 J0.000
+G2 X90.000 Y0.000 I91.500 J0.000
+G2 X-87.000 Y0.000 I-88.500 J0.000
+G2 X84.000 Y0.000 I85.500 J0.000
+G2 X-81.000 Y0.000 I-82.500 J0.000
+G2 X78.000 Y0.000 I79.500 J0.000
+G2 X-75.000 Y0.000 I-76.500 J0.000
+G2 X72.000 Y0.000 I73.500 J0.000
+G2 X-69.000 Y0.000 I-70.500 J0.000
+G2 X66.000 Y0.000 I67.500 J0.000
+G2 X-63.000 Y0.000 I-64.500 J0.000
+G2 X60.000 Y0.000 I61.500 J0.000
+G2 X-57.000 Y0.000 I-58.500 J0.000
+G2 X54.000 Y0.000 I55.500 J0.000
+G2 X-51.000 Y0.000 I-52.500 J0.000
+G2 X48.000 Y0.000 I49.500 J0.000
+G2 X-45.000 Y0.000 I-46.500 J0.000
+G2 X42.000 Y0.000 I43.500 J0.000
+G2 X-39.000 Y0.000 I-40.500 J0.000
+G2 X36.000 Y0.000 I37.500 J0.000
+G2 X-33.000 Y0.000 I-34.500 J0.000
+G2 X30.000 Y0.000 I31.500 J0.000
+G2 X-27.000 Y0.000 I-28.500 J0.000
+G2 X24.000 Y0.000 I25.500 J0.000
+G2 X-21.000 Y0.000 I-22.500 J0.000
+G2 X18.000 Y0.000 I19.500 J0.000
+G2 X-15.000 Y0.000 I-16.500 J0.000
+G2 X12.000 Y0.000 I13.500 J0.000
+G2 X-9.000 Y0.000 I-10.500 J0.000
+G2 X6.000 Y0.000 I7.500 J0.000
+(16 mm cutter covers the centre from this final 6 mm radius)
+G0 Z5.000
+G0 X0.000 Y0.000
+(MANUALLY STOP SPINDLE WHEN COMPLETE)
+M2

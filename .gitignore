@@ -1,0 +1,35 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# CAD application backup files
+*.FCStd[0-9]*
+*.FCBak
+*.blend[0-9]*
+
+# Temporary and editor files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.idea/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Keep job deliverables in Git: STL models, G-code, previews, validation
+# reports, setup notes, reference images, and previous design variants.

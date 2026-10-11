@@ -1,0 +1,53 @@
+STAR BURST TIMBER: ONE SPIRAL FACING PASS
+
+REQUIRES VERIFIED 216 MM USABLE Y TRAVEL. DOES NOT FIT A 200 MM Y RANGE.
+Use facing_Y200_setup.txt and the Y200 stretched-spiral program instead.
+
+File: face_230mm_spiral_16mm_one_pass.gcode
+Stock: centred circular timber, 220 to 230 mm diameter maximum.
+Tool: 16 mm facing cutter; its non-cutting centre is not plunged into wood.
+One cutting plane: 0.5 mm below the initial Z0. No additional depths/loops.
+Feed: 600 mm/min XY; 120 mm/min vertical descent while outside the stock.
+Spindle: use the cutter's suitable speed on the manual speed controller.
+This file does not switch the spindle or set its speed.
+
+SETUP
+1. Secure the timber and clear clamps from the cutter's swept envelope.
+   Tool centres: X -108 to +140, Y -108 to +108 relative to stock centre.
+   Cutter envelope: X -116 to +148, Y -116 to +116 (includes edge entry).
+   Required axis travel: 248 mm X and 216 mm Y. The advertised Y travel is
+   only 220 mm; confirm actual travel and stock positioning before cutting.
+2. Set G54 X0 Y0 at the timber centre; set Z0 to its HIGHEST top surface.
+   Use normal work zero/probing; the program does not set or change offsets.
+   Start above the centre at Z5 or higher. Z5 must clear stock and fixtures.
+3. Preview in the sender and perform an air run clear of timber first.
+   For an air run, temporarily raise work Z0 enough that the Z-0.5 path
+   clears the highest stock and fixtures. Restore actual surface Z0 after.
+4. Start the spindle manually before running the cutting program.
+5. The tool moves out to X140 at clearance, lowers entirely in air,
+   curves into the edge, completes a full outer circle, then spirals in.
+   All 37 arcs join tangentially. Radius shrinks 3 mm each spiral half turn.
+   The 16 mm cutter covers the centre at the final 6 mm centre radius.
+   It retracts to Z5 and returns to the timber centre. Stop spindle manually.
+
+REUSING THE SAME FILE
+To take another 0.5 mm off, reset Z0 to the newly faced top before rerunning.
+Running again with the same Z0 returns to the same cutting plane; it does
+not automatically lower the next pass. Reprobe/re-zero after flipping,
+and reset XY centre if the timber shifts. Use the same file for either side.
+Uneven areas more than 0.5 mm below the initial highest point can remain
+untouched after the first run. A single constant-depth pass is intentional.
+
+ESTIMATE AND VALIDATION
+About 11.4 minutes of arc motion at the programmed feed; allow extra time
+for approach/retract and acceleration. Feed/depth are initial choices from
+the project's existing feed, not a measured setup for this specific cutter.
+The adjacent JSON records validation of the saved G-code: arc radii and
+tangency, one constant depth, no rapid XY below clearance, descent fully
+outside timber, and sampled coverage of the full 230 mm disc and its rim.
+It is a geometric/software check, not a machine or fixture clearance test.
+
+REGENERATING
+Edit the constants in make_spiral_facing.py and run with Python containing
+NumPy and Pillow. The supplied validation is intentionally specific to the
+230 mm / 16 mm geometry; recheck machine travel for any geometry changes.

@@ -1,0 +1,56 @@
+{
+  "units": "mm",
+  "base_diameter_mm": 225,
+  "starburst_diameter_mm": 210,
+  "base_thickness_mm": 9,
+  "radial_border_width_mm": 7.5,
+  "pleats": 29,
+  "peaks": 29,
+  "troughs": 29,
+  "alternating_frame_alignment_positions": 58,
+  "angle_between_peak_and_next_trough_degrees": 6.206896551724138,
+  "angle_between_peaks_degrees": 12.413793103448276,
+  "first_peak_angle_degrees": 0,
+  "fold_angle_degrees": 70,
+  "fold_angle_definition": "Included acute opening at a tooth; not the face pitch from horizontal",
+  "edge_inward_draft_degrees_from_vertical": 35,
+  "maximum_edge_inset_mm": 10.83114074991804,
+  "crest_envelope_diameter_mm": 188.33771850016393,
+  "minimum_backing_mm": 9,
+  "outer_peak_to_valley_mm": 15.468472072738741,
+  "maximum_height_above_base_mm": 15.468472072738741,
+  "total_height_mm": 24.46847207273874,
+  "centre_top_z_mm": 17.15483692457258,
+  "half_amplitude_per_radius": 0.07766511356735792,
+  "perimeter_segments": 928,
+  "maximum_circle_chord_error_mm": 0.0006446528469539192,
+  "construction": "Inset planar radial pleats with inward tapered skirt on circular base with flat ledge and back at Z0",
+  "height_rule": "Peak-to-valley amplitude = 2 * radius * half_amplitude_per_radius within the pleated surface; the outer edge is clipped by its draft",
+  "frame_alignment": "29 peaks alternate with 29 troughs, for 58 equally spaced rays; rotate to suit frame",
+  "validation": {
+    "watertight": true,
+    "consistent_outward_winding": true,
+    "connected_components": 1,
+    "vertices": 3685,
+    "triangles": 7366,
+    "euler_characteristic": 2,
+    "volume_mm3": 620868.0934607574,
+    "bounds_mm": [
+      [
+        -112.5,
+        -112.5,
+        0.0
+      ],
+      [
+        112.5,
+        112.5,
+        24.46847152709961
+      ]
+    ],
+    "smallest_triangle_area_mm2": 0.4574851444871284,
+    "measured_fold_angle_min_degrees": 69.99990362166366,
+    "measured_fold_angle_max_degrees": 70.00020181077268,
+    "maximum_edge_draft_radius_error_mm": 5.173335644981236e-06,
+    "stl_size_bytes": 368384
+  }
+}

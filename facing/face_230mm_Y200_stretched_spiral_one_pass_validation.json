@@ -1,0 +1,62 @@
+{
+  "status": "PASS - saved G-code geometry and two-orientation coverage verified; not machine run",
+  "gcode_sha256": "b4bd9fa0fcb61b357c5783ddc917fa435fd1cc2fcd50404d2553f7fb3342dfaa",
+  "stock_max_diameter_mm": 230,
+  "cutter_diameter_mm": 16,
+  "conservative_machine_travel_mm": [
+    290,
+    200
+  ],
+  "required_xy_travel_mm": [
+    254,
+    196
+  ],
+  "tool_centre_bounds_mm": {
+    "x": [
+      -114.0,
+      140.0
+    ],
+    "y": [
+      -98.0,
+      98.0
+    ]
+  },
+  "cutter_swept_envelope_mm": {
+    "x": [
+      -122,
+      148
+    ],
+    "y": [
+      -106,
+      106
+    ]
+  },
+  "depth_per_run_mm": 0.5,
+  "pass_count_per_run": 1,
+  "cutting_z_mm": -0.5,
+  "radial_pitch_per_full_turn_mm": 6,
+  "xy_feed_mm_per_min": 600.0,
+  "air_descent_feed_mm_per_min": 120,
+  "clearance_z_mm": 5.0,
+  "minimum_arc_radius_mm": 6.5,
+  "maximum_curve_acceleration_mm_per_s2": 15.384615384615385,
+  "all_xy_cutting_joins_tangent": true,
+  "rapid_xy_at_clearance": true,
+  "descent_entirely_outside_stock": true,
+  "spindle_control": "manual",
+  "cutting_path_length_per_run_mm": 6861.57031401714,
+  "ideal_cutting_time_per_run_minutes": 11.4359505233619,
+  "orientations_required_for_complete_face": 2,
+  "second_orientation_rotation_deg": 90,
+  "second_orientation_z": "Keep original work Z0 and same absolute cutting plane; re-centre XY only",
+  "coverage_sample_count": 174402,
+  "coverage_grid_mm": 0.5,
+  "coverage_rim_samples": 8192,
+  "first_orientation_max_distance_to_path_mm": 17.0,
+  "both_orientations_max_distance_to_path_mm": 6.5,
+  "both_orientations_uncovered_samples": 0,
+  "measured_usable_machine_travel": "Not verified; 200 mm Y chosen conservatively",
+  "factory_settings_reference": "hardware/RAMPS/reference/wm3020-default-configuration/WM-3020.nc: Y200",
+  "last_saved_controller_readback": "hardware/RAMPS/uno-cnc/qa/Uno-WM3020-Pi-CNCjs-readback-2026-10-10.json: Y220",
+  "live_readback": "CNCjs API requires login; no machine commands or settings writes sent"
+}

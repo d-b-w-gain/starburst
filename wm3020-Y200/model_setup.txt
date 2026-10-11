@@ -1,0 +1,29 @@
+WM3020 - CONSERVATIVE 200 MM Y TRAVEL ROSE VARIANT
+
+starburst.stl is a complete design with the original 225 mm diameter,
+9 mm thick circular base and a reduced 190 mm diameter pleated relief.
+The base represents the existing timber that fits the frame; it is wider
+than a 200 mm Y range. The complete STL bounding box therefore still has
+225 mm X/Y dimensions. It is not a claim that every part of that base can
+be machined from one position.
+
+The 190 mm pleated area keeps 29 peaks and 29 troughs (58 frame positions),
+70 degree included folds and 35 degree inward edge lean. The flat border
+is now 17.5 mm wide. The raised height becomes about 14.0 mm above the
+9 mm base as a consequence of preserving the fold angle at smaller size.
+
+Use the Y200 stretched-spiral facing file in ../facing for the flat timber.
+Face once, rotate the stock 90 degrees, and run at the SAME work Z height
+to complete the flat face. Set centre and fixtures to allow the specified
+254 mm X by 196 mm Y travel. No controller settings were changed.
+
+Later relief CAM must limit its machining area to the 190 mm relief and
+appropriate cutter clearance. For example an outside profile of that
+190 mm circle with a 5 mm cutter needs 195 mm centre travel. Verify the
+actual generated toolpath bounds; do not mill a 225 mm outside-base
+contour in one position on a 200 mm Y machine. Leave the existing round
+base perimeter, or machine it separately with an indexed fixture.
+
+Regenerate this variant with the parent generator:
+make_starburst.py --diameter 190 --output wm3020-Y200 --preview
+The original 210 mm pleated-area STL remains in the parent folder.

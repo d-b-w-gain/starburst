@@ -1,0 +1,56 @@
+WM3020: 200 MM Y TRAVEL - STRETCHED SPIRAL FACING
+
+USE face_230mm_Y200_stretched_spiral_one_pass.gcode.
+The older circular-spiral file needs 216 mm Y travel and does not fit 200 mm.
+Each run is ONE 0.5 mm pass. A complete face needs TWO stock orientations.
+The 16 mm cutter cannot reach a full 220-230 mm disc from 200 mm Y travel.
+The stretched spiral reaches sideways and leaves small upper/lower edge
+areas. Rotating the timber 90 degrees brings these into the reachable area.
+
+TOUCH OFF AND POSITION
+Secure the timber. Use G54 XY0 at its centre and Z0 at the highest initial
+top surface. Begin above centre at Z5 or higher; Z5 must clear the stock
+and fixtures. Set spindle speed suitably for your cutter and start manually.
+The non-cutting tool centre is not plunged into wood: descent is in air.
+
+Required centre coordinates: X -114 to +140, Y -98 to +98.
+Required axis travel: 254 mm X, 196 mm Y (4 mm total inside 200 mm Y).
+Cutter swept envelope: X -122 to +148, Y -106 to +106, including entry.
+Check actual positioning, reach and clamps, and perform an air run first.
+The 200 mm Y assumption still requires at least 196 mm actual usable travel.
+
+COMPLETE ONE FACE
+1. Run the file once. It lowers to Z-0.5 in air, curves into a tangent edge
+   approach, sweeps the outer stadium and spirals inward, then retracts.
+2. Stop spindle manually. Rotate stock 90 degrees and re-clamp flat to the
+   SAME reference/support plane. Restore XY centre if it shifted.
+3. KEEP THE SAME ORIGINAL WORK Z0. Run the same file again at the same
+   absolute cutting height to finish the missing edge areas. Do not zero
+   Z on the newly cut middle: that would cut another 0.5 mm instead.
+4. If re-clamping changes the timber's height, restore the same cutting
+   plane using a fixed reference. Do not assume height survived a re-clamp.
+
+ANOTHER LAYER OR OPPOSITE SIDE
+For another layer, reset Z0 to the fully faced top, then repeat the two
+orientations. After flipping to face the other side, set XY centre and Z0
+to that side's highest surface, then perform the same two orientations.
+This file has no automated extra depths or automatic spindle commands.
+Feed 600 mm/min; 120 mm/min air descent. About 11.5 minutes per run plus
+positioning, acceleration and the manual rotation. Low areas can remain
+uncut after the first 0.5 mm layer if the original surface is very uneven.
+
+MACHINE LIMIT EVIDENCE
+FoxAlien factory WM-3020.nc: X300, Y200, Z60 settings.
+Latest saved Uno/CNCjs profile: X290, Y220, Z70 settings (10 Oct 2026).
+The advertised working range was recorded as X290, Y220, Z70.
+These values differ and none proves physical usable travel. This program
+conservatively uses the smaller Y value. Controller limits were not changed.
+The live CNCjs API was reachable but required login, so no fresh settings
+or machine motions were requested. Physical travel has not been measured.
+
+VALIDATION
+The adjacent JSON checks the actual saved G-code: one constant cutting
+plane, tangent arc/straight joins, exact axis bounds, air-only descent and
+rapid XY at clearance. Analytic distances on a 0.5 mm stock grid and 8192
+rim points confirm coverage after rotating 90 degrees at the same Z.
+Geometry validation does not verify clamping, actual axis reach or run it.

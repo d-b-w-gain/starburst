@@ -1,0 +1,59 @@
+{
+  "status": "PASS - geometry and saved G-code validated; machine execution not performed",
+  "gcode_sha256": "1aa7d1c30a32c2746b8dd384804077a1ee1d35bd29cc71074664e545a8428e1c",
+  "stock_max_diameter_mm": 230.0,
+  "cutter_diameter_mm": 16.0,
+  "pass_count": 1,
+  "depth_mm": 0.5,
+  "cutting_z_mm": -0.5,
+  "clearance_z_mm": 5.0,
+  "xy_feed_mm_per_min": 600.0,
+  "air_descent_feed_mm_per_min": 120.0,
+  "radial_pitch_per_revolution_mm": 6.0,
+  "spiral_half_turns": 34,
+  "arc_count": 37,
+  "minimum_arc_radius_mm": 7.5,
+  "maximum_curve_acceleration_mm_per_s2": 13.333333333333334,
+  "tool_centre_bounds_mm": {
+    "x": [
+      -108.0,
+      140.0
+    ],
+    "y": [
+      -108.0,
+      108.0
+    ]
+  },
+  "required_xy_travel_mm": [
+    248.0,
+    216.0
+  ],
+  "cutter_swept_envelope_mm": {
+    "x": [
+      -116.0,
+      148.0
+    ],
+    "y": [
+      -116.0,
+      116.0
+    ]
+  },
+  "cutting_path_length_mm": 6817.256058289851,
+  "ideal_cutting_time_minutes": 11.362093430483085,
+  "coverage_sample_count": 170306,
+  "coverage_grid_spacing_mm": 0.5,
+  "coverage_rim_samples": 4096,
+  "maximum_stock_distance_to_tool_centre_path_mm": 7.5,
+  "maximum_distance_sample_xy_mm": [
+    -1.5,
+    0.0
+  ],
+  "centre_distance_to_path_mm": 6.0,
+  "all_cutting_arcs_tangent": true,
+  "all_cutting_arcs_same_z": true,
+  "vertical_descent_outside_stock": true,
+  "rapid_xy_at_clearance": true,
+  "spindle_control": "manual - no spindle commands",
+  "repeat": "Reset Z0 to newly faced top for another 0.5 mm cut before rerunning",
+  "machine_fit": "Factory Y setting 200 mm; later profile 220 mm. Requires VERIFIED 216 mm usable Y. Use Y200 version otherwise."
+}
